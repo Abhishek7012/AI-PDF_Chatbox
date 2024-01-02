@@ -1,0 +1,25 @@
+/* Styles for the App component */
+.container {
+    text-align: center;
+  }
+  
+  .responses {
+    margin-top: 20px;
+  }
+  
+  .response {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* Center the input and button in the container */
+  .input-group {
+    justify-content: center;
+  }
+  
+  /* Add some spacing between the button and input field */
+  .input-group-append {
+    margin-left: 10px;
+  }
+  
