@@ -9,7 +9,7 @@ const fs = require('fs');
 
 exports.embeding = async(req, res) =>{
     try {
-        const text = fs.readFileSync("/Users/HP/Desktop/AI-chatbox Backend/Backend/uploads/test.pdf", "utf-8");
+        const text = fs.readFileSync("/Users/HP/Desktop/AI-PDF_Reader/Server/uploads/test.pdf", "utf-8");
         const text_splitter = new RecursiveCharacterTextSplitter(
           chunk_size=1000
         );
@@ -25,7 +25,7 @@ exports.embeding = async(req, res) =>{
         console.error(error);
         res.status(500).send({ error: 'Error embedding' });
     }
-  const text = fs.readFileSync("/Users/HP/Desktop/AI-chatbox Backend/Backend/uploads/test.pdf", "utf-8");
+  const text = fs.readFileSync("/Users/HP/Desktop/AI-PDF_Reader/Server/uploads/test.pdf", "utf-8");
   const text_splitter = new RecursiveCharacterTextSplitter(
     chunk_size=1000
   );
@@ -46,7 +46,7 @@ exports.retrival = async (req, res) => {
     const question = req.body.question;
 
     const embeddings = new OpenAIEmbeddings();
-    const new_vectorstore = await FaissStore.load("/Users/HP/Desktop/AI-chatbox Backend/Backend/faiss_index_react", embeddings);
+    const new_vectorstore = await FaissStore.load("/Users/HP/Desktop/AI-PDF_Reader/Server/faiss_index_react", embeddings);
     const vectorStoreRetriever = new_vectorstore.asRetriever();
 
     const model = new ChatOpenAI({ temperature: 1, model_name: "gpt-3.5-turbo" });

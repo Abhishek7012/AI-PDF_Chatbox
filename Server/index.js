@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors({origin: '*'}));
 app.use(express.json());
 require('dotenv').config();
-process.env.OPENAI_API_KEY = 'Enter your api key here';
+process.env.OPENAI_API_KEY = 'Enter Your Api Key Here';
 
 
 const storage = multer.diskStorage({
@@ -82,5 +82,5 @@ app.get("/list/:id", async (req, res) => {
   
 
 app.listen(PORT, () => {
-  console.log('Server Running sucessfully.');
+  console.log(`Server Running sucessfully on PORT ${PORT}`);
 });

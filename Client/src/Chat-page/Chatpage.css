@@ -1,156 +1,95 @@
-::-webkit-scrollbar{
-  width: 1px;;
-}
-     
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-    }
- 
-body{
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
-  display:grid;
-  justify-content:center;
-}
- 
-#container{
-  background-color: #b53434;
-  margin:0;
-  height:100vh;
-  width:100vw;
-  max-width:540px;
-  box-shadow:inset 0 0 10px 4px rgb(201, 86, 86);
-}
- 
-#msg_send{
-    outline:none;
-    font-size:20px;
-    padding:0 16px;
-    border-radius:32px 0 32px 32px;
-      background:#ececee;
-      color:#333;
-      border:solid 1px #777;
-      border-right:none;
-    }
- 
-    .input{
-        height:7%;
-        background:linear-gradient(#ececee 50%, #1c1f46 50%);
-        display:grid;
-        grid-template-columns:70% 30%;
-        border-radius:32px;
-        margin:8px 16px;
-        min-height:42px;
-        box-shadow:inset 0 1px 0 #777;
-    }
-    .send{
-        outline:none;
-        font-size:20px;
-          border:none;
-          background:#1c1f46;
-          border-radius:32px;
-          color:#eee;
-          transition-duration:0.2s;
-    }
-    .send:active{
-          font-size:16px;
-    }
- 
-    .left, .right{
-        font-size:18px;
-        display:inline-block;
-        padding:14px;
-        width:auto;
-        max-width:60%;
-        margin:8px 16px;
-          font-family:monospace;
-          word-wrap:break-word;
-    }
- 
-    .left{
-        color:#000;
-          background:#b3bfca;
-        border-radius:0 16px 16px 16px;
-    }
- 
-    .right{
-        float:right;
-        color:#fff;
-          background:#1c1f46;
-        border-radius:16px 16px 0 16px;
-    }
- 
-    #msg{
-        overflow-y:scroll;
-          height:82%;
-          padding:0 12px;
-          scroll-behavior:smooth;
-    }
- 
-h1{
-  text-align:center;
-  background:#1c1f46;
-  padding: 10px;
-  font-family:sans-serif;
-  color:#fff;
-  text-shadow:1px 1px 4px #111;
-  box-shadow:0 4px 8px #000a;
-  margin-bottom:8px;
-}
- 
-.responses {
-  height: 300px;
-   overflow-y:scroll;
-   overflow-x: scroll;
-   width: 500px;
-   overflow-wrap: break-word;
-}
-h3{
-    font-family:monospace;
-    font-size:20px;
+/* Chatpage.css */
+
+.navbar {
+  width: 100%;
 }
 
-.question{
-  text-decoration-color: #1422e4;
-}
-.msgCon1, .msgCon2{
-    width:100%;
-    display:inline-block;
+.container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.inputbox{
-  height:7%;
-  background:(#ececee 50%);
-  display:-ms-grid;
-  grid: template columns 100px;;
-  border-radius:32px;
-  margin:8px 16px;
-  min-height:42px;
-  box-shadow:inset 0 1px 0 #b53434;
+.container h1 {
+  text-align: center;
+  color: #007bff;
 }
+
 .error-container {
-  background-color: #ffcccc;
-  color: #ff0000;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ff0000;
-  border-radius: 4px;
+  background-color: #ffc107;
+  color: #856404;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
 }
+
 .login-button {
-  background-color: #1c1f46;
+  background-color: #28a745;
   color: #fff;
-  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  transition-duration: 0.2s;
 }
 
 .login-button:hover {
-  background-color: #1422e4;
+  background-color: #218838;
 }
 
+.card {
+  margin-bottom: 15px;
+}
+
+.card-title, .card-text {
+  margin-bottom: 0;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.send {
+  border-radius: 5px;
+}
+
+.main {
+  background-color: #f4f4f4;
+  padding: 30px 0;
+  min-height: 10vh;
+}
+
+.responses {
+  margin-top: 20px;
+}
+
+.responses {
+  margin-top: 20px;
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
